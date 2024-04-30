@@ -4,8 +4,9 @@ import viteLogo from "/vite.svg";
 import "./app.css";
 import Blog from "./pages/blog/Blog";
 
-import { h } from 'preact';
-import { Router, Route } from 'preact-router';
+import { h } from "preact";
+import { Router, Route } from "preact-router";
+import View from "./pages/blog/view/View";
 
 export function App() {
   const [count, setCount] = useState(0);
@@ -13,6 +14,7 @@ export function App() {
   return (
     <Router>
       <Route path="/" component={Blog} />
+      <Route path="/blog/view" component={View} />
       {/* <Route path="/about" component={About} />
       <Route default component={NotFound} /> */}
     </Router>
